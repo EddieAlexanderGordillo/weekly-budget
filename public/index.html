@@ -5,6 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Presupuesto semanal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/style/style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Presupuesto semanal</h1>
+      </header>
+      <main>
+        <div class="contenido-primario">
+          <h2>Añade tus gastos aqui</h2>
+          <form id="agregar-gasto" class="contenido__formulario" action="#">
+            <div class="form_group">
+              <label for="gasto" class="label__gasto">Gasto</label>
+              <input
+                type="text"
+                class=""
+                id="gasto"
+                placeholder="Nombre Gasto"
+              />
+            </div>
+            <div class="form_group">
+              <label for="cantidad" class="label__cantidad">Cantidad</label>
+              <input
+                type="text"
+                class=""
+                id="cantidad"
+                placeholder="Cantidad en $"
+              />
+            </div>
+            <button type="submit" class="btnAgregar">Agregar</button>
+          </form>
+        </div>
+        <div class="contenido-secundario">
+          <h2>Listado</h2>
+          <div class="pp">
+            <div id="gastos">
+              <ul class="gastos__lista"></ul>
+            </div>
+            <div id="presupuesto" class="contenido__presupuesto">
+              <div class="presupuesto__total">
+                <p>Presupuesto: $ <span id="total"></span></p>
+              </div>
+              <div class="presupuesto__restante">
+                <p>Restante: $ <span id="restante"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="../src/index.js"></script>
+  </body>
 </html>
